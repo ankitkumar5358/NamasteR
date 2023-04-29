@@ -1,0 +1,30 @@
+{
+  "name": "namaster",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ankit",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3",
+    "process": "^0.11.10",
+    "react-scripts": "^5.0.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ankitkumar5358/React-Restaurant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ankitkumar5358/React-Restaurant/issues"
+  },
+  "homepage": "https://github.com/ankitkumar5358/React-Restaurant#readme",
+  "description": ""
+}
