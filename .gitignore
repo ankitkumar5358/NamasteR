@@ -1,4 +1,4 @@
 /dist/
 /.cache/
+.cache/
 /node_modules/
-# *.map

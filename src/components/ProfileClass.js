@@ -13,19 +13,30 @@ class Profile extends React.Component {
         console.log("child constructor" + this.props.name);
     }
 
-    async componentDidMount() {
+    componentDidMount() {
         // place to make api calls = best
-        const data = await fetch("https://api.github.com/users/ankitkumar5358");
-        const json = await data.json();
-        console.log(json);
-        // this.setState = ({
+        // const data = await fetch("https://api.github.com/users/ankitkumar5358");
+        // const json = await data.json();
+        // console.log(json);
+        // // this.setState = ({
+        // //     userInfo : json,
+        // // })
+        // this.setState({
         //     userInfo : json,
-        // })
-        this.setState({
-            userInfo : json,
-        });
-        console.log("child component did mount" + this.props.name);
+        // });
+        setInterval(()=>{
+            console.log("child component did mount" + this.props.name);
+        }, 1000)
+
     }
+    componentDidUpdate() {
+        console.log('componentDidUpdate');
+    }
+    componentWillUnmount() {
+        clearInterval();
+        console.log('componentWillUnmount');
+    }
+    
     render() {
         const {count} = this.state;
         console.log(" child render " + this.props.name);

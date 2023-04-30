@@ -5,6 +5,9 @@ const ProfileFunctionalComponent = (props) => {
     useEffect(()=>{
         // API Call
         console.log("render3 api");
+        setInterval(()=>{
+          console.log("child component did mount" + this.props.name);
+      }, 1000)
     })
     // const [count1] = useState(1);
 
