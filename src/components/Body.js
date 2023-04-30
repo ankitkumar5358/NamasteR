@@ -25,6 +25,7 @@ const Body = () => {
   async function getRestaurants() {
     const res = await fetch(RESTAURANTS_URL);
     const json = await res.json();
+    
 
     setRestaurant(
       json?.data?.success?.cards[1]?.gridWidget?.gridElements?.infoWithStyle
