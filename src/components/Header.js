@@ -3,7 +3,9 @@ import { useEffect, useState } from "react"; // named import
 import "../../App.css";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
-import "./Header.css"
+import "./css/Header.css"
+
+
 const loggedInUser = () => {
   return false;
 };

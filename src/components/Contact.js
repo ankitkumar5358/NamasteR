@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import '../../App.css'
-import "./Contact.css"
+import "./css/Contact.css"
 
 
 const ContactUs = () => {

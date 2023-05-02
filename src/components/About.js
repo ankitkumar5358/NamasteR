@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import ProfileFunctionalComponent from "./Profile";
 import Profile from "./ProfileClass";
 import {Component} from "react";
-import "./About.css"
+import "./css/About.css"
 
 class About extends Component {
     constructor(props) {
