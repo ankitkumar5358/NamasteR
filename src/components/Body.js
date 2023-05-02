@@ -5,7 +5,9 @@ import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import "../../App.css";
 import { RESTAURANTS_URL } from "../constants";
-import filterData from "./filterData";
+import filterData from "../utils/helper";
+import useOnline from "../utils/useOnline";
+// import {filterData} from "./filterData";
 
 // function filterData(searchText, restaurants) {
 //   const filterData = restaurants.filter((restaurant) =>
@@ -37,6 +39,11 @@ const Body = () => {
         ?.restaurants
     );
   }
+
+  // const isOnline  = useOnline();
+  // if(!isOnline) {
+  //   return <h1> 🎟️ Please check your internet connection!!</h1>
+  // }
 
   return allRestaurants.length === 0 ? (
     <Shimmer />

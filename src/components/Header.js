@@ -2,6 +2,7 @@ import logo from "../../images/logo.png";
 import { useEffect, useState } from "react"; // named import
 import "../../App.css";
 import { Link } from "react-router-dom";
+import useOnline from "../utils/useOnline";
 
 const loggedInUser = () => {
   return false;
@@ -33,6 +34,7 @@ const Header = () => {
           <li>Cart</li>
         </ul>
       </div>
+      <h1>{useOnline ? "🟩 - Online" : "🟥 - Offline"}</h1>
       <div className="button-container">
         {isLoggedIn ? (
           <button
