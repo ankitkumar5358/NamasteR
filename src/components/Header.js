@@ -31,7 +31,10 @@ const Header = () => {
           <Link to="/contact">
             <li>Contact</li>
           </Link>
-          <li>Cart</li>
+          <Link to="/instamart">
+            <li>Instamart</li>
+          </Link>
+          
         </ul>
       </div>
       <h1>{useOnline ? "🟩 - Online" : "🟥 - Offline"}</h1>
