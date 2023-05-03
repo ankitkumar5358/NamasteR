@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"; // named import
 import "../../App.css";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
-
+import "./Header.css"
 const loggedInUser = () => {
   return false;
 };
@@ -21,22 +21,14 @@ const Header = () => {
     <div className="header">
       <Title />
       <div className="nav-items">
-        <ul>
-          <Link to="/">
-            <li>Home</li>
-          </Link>
-          <Link to="/about">
-            <li>About</li>
-          </Link>
-          <Link to="/contact">
-            <li>Contact</li>
-          </Link>
-          <Link to="/instamart">
-            <li>Instamart</li>
-          </Link>
-          
-        </ul>
-      </div>
+      <ul className="menu">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/instamart">Instamart</Link></li>
+      </ul>
+    </div>
+
       <h1>{useOnline ? "🟩 - Online" : "🟥 - Offline"}</h1>
       <div className="button-container">
         {isLoggedIn ? (
