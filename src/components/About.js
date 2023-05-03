@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import ProfileFunctionalComponent from "./Profile";
 import Profile from "./ProfileClass";
 import {Component} from "react";
+import "./About.css"
 
 class About extends Component {
     constructor(props) {
@@ -16,15 +17,14 @@ class About extends Component {
     render() {
         console.log('parent render');
         return (
-            <>
-            <h2>About 2 Class Component</h2>
-            <p>Namaste React Course Live</p>
+            <div className="main">
+            <h2 className="heading" >About 2 Class Component</h2>
+            <p className="sub-heading">Namaste React Course Live</p>
             {/* <ProfileFunctionalComponent name={"Ankit"} /> */}
             <Profile name={"First Child"} xyz={"MERN"} />
             
-            </>
+            </div>
         )
     }
 }
-// 12:16:00
 export default About;
