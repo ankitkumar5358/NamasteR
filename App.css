@@ -5,45 +5,6 @@
     overflow-x: hidden;
 }
 
-/* Header CSS */
-/*
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 10px;
-    width: auto;
-    background-color: rgb(1, 163, 144);
-    border-radius: 5px;
-    box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
-    color: black;
-    font-weight: bold;
-}
-
-
-.logo {
-    padding-left: 10px;
-    width: 100px;
-    height: 80px;
-}
-
-.nav-items {
-    padding: 0 10px 0;
-    width: auto;
-}
-
-.nav-items>ul {
-    list-style-type: none;
-    display: flex;
-}
-
-.nav-items>ul>li {
-    padding: 30px 10px 0 0;
-    font-size: large;
-    cursor: pointer;
-    color: white;
-}
-*/
 
 /* Body CSS */
 
@@ -163,7 +124,7 @@
 
 .login-button {
     background-color: #4CAF50;
-    border: 1px solid #00e608;
+    /* border: 1px solid #00e608; */
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -176,7 +137,7 @@
 
 .logout-button {
     background-color: #f44336;
-    border: 1px solid #f91100;
+    /* border: 1px solid #f91100; */
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -208,58 +169,4 @@
     display: flex;
   }
 
-  /*
-  .contact-us {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-  }
   
-  h2 {
-    font-size: 0.8rem;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    max-width: 200px;
-  }
-  
-  label {
-    font-size: 0.4rem;
-    margin-bottom: 5px;
-  }
-  
-  input,
-  textarea {
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    font-size: 0.3rem;
-  }
-  
-  textarea {
-    height: 200px;
-  }
-  
-  button {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #fdd835;
-    color: #fff;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ffea00;
-  }
-  */
