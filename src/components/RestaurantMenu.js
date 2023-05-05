@@ -6,7 +6,6 @@ import useRestaurant from "../utils/useRestaurant";
 
 const RestaurantMenu = () => {
   const { id } = useParams();
-  // const restaurant = useRestaurants(id);
   const restaurant = useRestaurant(id);
 
   return (!restaurant) ? (
