@@ -1,9 +1,9 @@
 import React, {lazy, Suspense} from "react";
 import ReactDOM from "react-dom/client";
+import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import Error from "./components/Error";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";

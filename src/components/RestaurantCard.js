@@ -6,7 +6,7 @@ const RestaurantCard = ({
   cuisines,
   lastMileTravelString,
   avgRatingString,
-  veg, costForTwo
+  costForTwo
 }) => {
   return (
     <div className="w-56 p-2 m-2 shadow-lg bg-pink-50">
@@ -20,11 +20,11 @@ const RestaurantCard = ({
       <h4> {avgRatingString} ⭐ </h4>
     }
     
-    { veg === 'true'  ? (
+    {/* { veg === 'true'  ? (
       <h4> {veg} Veg 🟢 </h4>
     ) : 
     <h4> {veg} Non-Veg🔴 </h4>
-     }
+     } */}
 
     </div>
   );
