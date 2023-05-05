@@ -1,6 +1,5 @@
 import logo from "../../images/logo.png";
-import { useEffect, useState } from "react"; // named import
-import "../../App.css";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 
