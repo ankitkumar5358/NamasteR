@@ -1,7 +1,8 @@
 import logo from "../../images/logo.png";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import UserContext from "../utils/useContext";
 
 const loggedInUser = () => {
   return false;
@@ -15,6 +16,9 @@ export const Title = () => (
 
 const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const isOnline = useOnline();
+
+  const {user} = useContext(UserContext);
 
   return (
     <>
@@ -36,8 +40,9 @@ const Header = () => {
           </li>
         </ul>
       </div>
-
-      <h1>{useOnline ? "🟩 - Online" : "🟥 - Offline"}</h1>
+      
+      <h1>{useOnline ? "🟩 Online" : "🟥 Offline"}</h1>
+     <h1 className="text-blue-950">  {user.name}</h1>
       <div className="">
         {isLoggedIn ? (
           <button className="border-2 border-blue-500 hover:bg-blue-500 hover:text-white text-blue-500 font-bold py-2 px-4 rounded" onClick={() => setIsLoggedIn(false)}>

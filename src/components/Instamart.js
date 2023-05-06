@@ -16,49 +16,27 @@ const Section = ({ title, description, isVisible, setIsVisible }) => {
 }
 
 const Instamart = () => {
-  const [sectionConfig, setSectionConfig] = useState({
-    showAbout: true,
-    shopwTeam: false,
-    showCareer: true
-  })
+  const [visibleSection, setVisibleSection] = useState( <Section/>);
   return (
     <div>
       <h1 className='text-3xl p-2 m-2 font-bold'> Instamart </h1>
       <Section
         title={"About Instamart"}
         description={"Everything you need gets delivered in minutes with Swiggy Instamart. Order now. Order fruits, veggies, milk, munchies & more online from Swiggy Instamart. Great deals. Safe packing. Door Step Delivery. Instant delivery. Fresh Products. "}
-        isVisible={sectionConfig.showAbout}
-        setIsVisible={() => {
-          setSectionConfig({
-            showAbout: true,
-            shopwTeam: false,
-            showCareer: false
-          })
-        }}
+        isVisible={visibleSection === "about"}
+        setIsVisible={() => setVisibleSection("about") }
       />
       <Section
         title={"Team Instamart"}
         description={"This is team  instamart page. Team has 100+ members. Everything you need gets delivered in minutes with Swiggy Instamart. Order now. Order fruits, veggies, milk, munchies & more online from Swiggy Instamart. Great deals. Safe packing. Door Step Delivery. Instant delivery. Fresh Products."}
-        isVisible={sectionConfig.shopwTeam}
-        setIsVisible={() => {
-          setSectionConfig({
-            showAbout: false,
-            shopwTeam: true,
-            showCareer: false
-          })
-        }}
+        isVisible={visibleSection === "team"}
+        setIsVisible={() => setVisibleSection("team") }
       />
       <Section
         title={"Career Instamart"}
         description={"This is career  instamart page. Team has 100+ members. Everything you need gets delivered in minutes with Swiggy Instamart. Order now. Order fruits, veggies, milk, munchies & more online from Swiggy Instamart. Great deals. Safe packing. Door Step Delivery. Instant delivery. Fresh Products."}
-        isVisible={sectionConfig.showCareer}
-        setIsVisible={() => {
-          setSectionConfig({
-            showAbout: false,
-            shopwTeam: false,
-            showCareer: true
-          })
-        }}
+        isVisible={visibleSection === "career"}
+        setIsVisible={() => setVisibleSection("career") }
       />
       {/* <AboutInstaMart/>
     <DetailsOfInstaMart/>
