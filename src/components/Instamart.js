@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 const Section = ({ title, description, isVisible, setIsVisible }) => {
-  // const [isVisible, setIsVisible] = useState(false);
   return (
     <div className='text-center border border-black py-2 px-2'>
       <h3>{title}</h3>
       {isVisible ?
-        <button onClick={() => setIsVisible(false)} className="rounded hover:rounded-lg">Hide</button>
+        <button onClick={() => setIsVisible(false)} className="rounded hover:rounded-lg bg-blue-500 text-white px-3 py-2 mt-3">Hide</button>
         :
-        <button onClick={() => setIsVisible(true)} className="rounded hover:rounded-lg">Show</button>
+        <button onClick={() => setIsVisible(true)} className="rounded hover:rounded-lg bg-blue-500 text-white px-3 py-2 mt-3">Show</button>
       }
-      {isVisible && <p> {description} </p>}
+      {isVisible && <p className="mt-3"> {description} </p>}
     </div>
   )
 }
 
 const Instamart = () => {
-  const [visibleSection, setVisibleSection] = useState( <Section/>);
+  const [visibleSection, setVisibleSection] = useState("");
   return (
     <div>
       <h1 className='text-3xl p-2 m-2 font-bold'> Instamart </h1>
@@ -38,13 +37,8 @@ const Instamart = () => {
         isVisible={visibleSection === "career"}
         setIsVisible={() => setVisibleSection("career") }
       />
-      {/* <AboutInstaMart/>
-    <DetailsOfInstaMart/>
-    <TeamInstaMart/>
-    <Product/>
-    <Careers/>  */}
     </div>
   );
 };
 
-export default Instamart
+export default Instamart;
