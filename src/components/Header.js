@@ -25,21 +25,21 @@ const Header = () => {
     <div className="flex items-center justify-between bg-pink-50 shadow-md mb-5 px-5">
       <Title />
       <div>
-        <ul className="flex py-8">
-          <li className="px-2">
-            <Link to="/">Home</Link>
-          </li>
-          <li className="px-2">
-            <Link to="/about">About</Link>
-          </li>
-          <li className="px-2">
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li className="px-2">
-            <Link to="/instamart">Instamart</Link>
-          </li>
-        </ul>
-      </div>
+    <ul className="flex">
+      <li className="px-2">
+        <Link to="/" className="text-gray-700 hover:text-blue-500">Home</Link>
+      </li>
+      <li className="px-2">
+        <Link to="/about" className="text-gray-700 hover:text-blue-500">About</Link>
+      </li>
+      <li className="px-2">
+        <Link to="/contact" className="text-gray-700 hover:text-blue-500">Contact</Link>
+      </li>
+      <li className="px-2">
+        <Link to="/instamart" className="text-gray-700 hover:text-blue-500">Instamart</Link>
+      </li>
+    </ul>
+  </div>
       
       <h1>{useOnline ? "🟩 Online" : "🟥 Offline"}</h1>
      <h1 className="text-blue-950">  {user.name}</h1>
