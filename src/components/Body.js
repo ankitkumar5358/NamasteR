@@ -4,7 +4,7 @@ import { useEffect, useState, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { RESTAURANTS_URL } from "../constants";
-import filterData from "../utils/helper";
+import filterData from "./filterData";
 import useOnline from "../utils/useOnline";
 import UserContext from "../utils/useContext";
 
