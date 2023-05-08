@@ -10,9 +10,9 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import Profile from "./components/Profile";
 import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/useContext";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
-
-// lazy loading instamart || on demand load
 const Instamart = lazy(()=> import("./components/Instamart"));
 const About = lazy(()=> import("./components/About"));
 
@@ -22,13 +22,13 @@ const AppLayout = () => {
     email : "createrankit@gmail.com"
   })
   return (
-    <>
+    <Provider store={store}>
     <UserContext.Provider value={{user : user, setUser : setUser}}>
       <Header />
       <Outlet />
       <Footer />
     </UserContext.Provider>
-    </>
+    </Provider>
   );
 };
 
