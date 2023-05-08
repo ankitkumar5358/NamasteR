@@ -3,11 +3,16 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { IMG_URL } from "../constants";
 import useRestaurant from "../utils/useRestaurant";
+import { addItem } from "../utils/cartSlice";
+import { useDispatch } from "react-redux";
 
 const RestaurantMenu = () => {
   const { id } = useParams();
-  const restaurant = useRestaurant(id);
-
+  const restaurant = useRestaurant(id);;
+  const dispatch = useDispatch()
+  const handleAddItem = () =>{
+    dispatch(addItem("Grapes"));
+  }
   return (!restaurant) ? (
     <Shimmer />
   ) : (
@@ -30,6 +35,7 @@ const RestaurantMenu = () => {
         </h2>
       </div>
       <div>
+      <button className="p-2 m-5 bg-green-100" onClick={() => handleAddItem()}> Add Item</button>  
         <h2>Menu Items:</h2>
         <ul>
           {restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards

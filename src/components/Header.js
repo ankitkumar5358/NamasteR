@@ -3,10 +3,11 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import UserContext from "../utils/useContext";
+import { useSelector } from "react-redux";
 
 const loggedInUser = () => {
   return false;
-};
+}; 
 
 export const Title = () => (
   <a href="/">
@@ -19,6 +20,7 @@ const Header = () => {
   const isOnline = useOnline();
 
   const {user} = useContext(UserContext);
+  const cartItems  = useSelector(store => store.cart.items);
 
   return (
     <>
@@ -37,6 +39,9 @@ const Header = () => {
       </li>
       <li className="px-2">
         <Link to="/instamart" className="text-gray-700 hover:text-blue-500">Instamart</Link>
+      </li>
+      <li className="px-2">
+        <Link  className="text-gray-700 hover:text-blue-500">Cart {cartItems.length}</Link>
       </li>
     </ul>
   </div>
