@@ -9,21 +9,25 @@ import { useDispatch } from "react-redux";
 const RestaurantMenu = () => {
   const { id } = useParams();
   const restaurant = useRestaurant(id);;
-  const dispatch = useDispatch()
-  const handleAddItem = () =>{
-    dispatch(addItem("Grapes"));
-  }
+  const dispatch = useDispatch();
+  // const handleAddItem = () =>{
+  //   dispatch(addItem("Grapes"));
+  // }
+const addFoodItem = (item) => {
+  dispatch(addItem(item));
+}
   return (!restaurant) ? (
     <Shimmer />
   ) : (
-    <div className="menu-container">
-      <div>
+    <div className="flex p-5 m-5 menu-container">
+      <div className="px-2 py-2 mx-2 my-2">
         <h4>{restaurant?.data?.cards[0]?.card?.card?.info?.name}</h4>
         <h4>
           {restaurant?.data?.cards[0]?.card?.card?.info?.locality}{" "}
           {restaurant?.data?.cards[0]?.card?.card?.info?.areaName}
         </h4>
         <img
+          className="h-200 w-200"
           alt="restaurant_image"
           src={
             IMG_URL +
@@ -35,19 +39,19 @@ const RestaurantMenu = () => {
         </h2>
       </div>
       <div>
-      <button className="p-2 m-5 bg-green-100" onClick={() => handleAddItem()}> Add Item</button>  
+      {/* <button className="p-2 m-5 bg-green-100" onClick={() => handleAddItem()}> Add Item</button>   */}
         <h2>Menu Items:</h2>
-        <ul>
+        <ul className="px-2 py-2 mx-2 my-2">
           {restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards
             ? restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards.map(
               (item) => {
-                return <li key={item.card.info.name}>{item.card.info.name}</li>;
+                return <li  className="px-2 py-2 mx-2 my-2" key={item.card.info.name}> {item.card.info.name}  <button className="p-1 bg-green-100" onClick={() => addFoodItem(item) } >Add</button> </li>;
               }
             )
             : restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards
               ? restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards.map(
                 (item) => {
-                  return <li key={item.card.info.name}>{item.card.info.name}</li>;
+                  return <li className="px-2 py-2 mx-2 my-2" key={item.card.info.name}>{item.card.info.name}</li>;
                 }
               )
               : <li>No menu items available</li>

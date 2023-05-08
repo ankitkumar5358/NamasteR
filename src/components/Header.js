@@ -41,7 +41,7 @@ const Header = () => {
         <Link to="/instamart" className="text-gray-700 hover:text-blue-500">Instamart</Link>
       </li>
       <li className="px-2">
-        <Link  className="text-gray-700 hover:text-blue-500">Cart {cartItems.length}</Link>
+        <Link to="/cart"  className="text-gray-700 hover:text-blue-500">Cart {cartItems.length}</Link>
       </li>
     </ul>
   </div>
