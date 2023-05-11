@@ -31,7 +31,7 @@ const Cart = () => {
         ) : (
           <div className="flex flex-wrap">
             {cartItems.map((items, index) => (
-              <FoodItem {...items} index={index} />
+              <FoodItem {...items} index={index}/>
             ))}
           </div>
         )}
