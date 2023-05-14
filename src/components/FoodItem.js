@@ -7,8 +7,6 @@ const FoodItem = ({ name, price, imageId, id, description, index  }) => {
   const handleRemoveItem = (index) => {
     dispatch(clearCart(index));
   };
-
-  // console.log(index);
   return (
     <div key={id} className="w-56 m-2 p-2 bg-orange-100 shadow-md">
       <img className="p-2" src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/" + imageId} />
@@ -18,7 +16,6 @@ const FoodItem = ({ name, price, imageId, id, description, index  }) => {
       <button onClick={() => handleRemoveItem()}>
         Delete
       </button>
-      {/* <h3>{index}</h3> */}
     </div>
   );
 };

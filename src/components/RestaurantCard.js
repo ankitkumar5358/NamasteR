@@ -1,7 +1,6 @@
 import { IMG_CDN_URL} from "../constants";
 import { useContext } from "react";
 import UserContext from "../utils/useContext";
-// import UserContext from "../utils/useContext";
 
 const RestaurantCard = ({
   cloudinaryImageId,

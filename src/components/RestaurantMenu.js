@@ -10,9 +10,6 @@ const RestaurantMenu = () => {
   const { id } = useParams();
   const restaurant = useRestaurant(id);;
   const dispatch = useDispatch();
-  // const handleAddItem = () =>{
-  //   dispatch(addItem("Grapes"));
-  // }
 const addFoodItem = (item) => {
   dispatch(addItem(item));
 }
@@ -39,7 +36,6 @@ const addFoodItem = (item) => {
         </h2>
       </div>
       <div>
-      {/* <button className="p-2 m-5 bg-green-100" onClick={() => handleAddItem()}> Add Item</button>   */}
         <h2>Menu Items:</h2>
         <ul className="px-2 py-2 mx-2 my-2">
           {restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards
