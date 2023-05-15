@@ -12,7 +12,7 @@ import Shimmer from "./components/Shimmer";
 import UserContext from "./utils/useContext";
 import { Provider } from "react-redux";
 import store from "./utils/store";
-import Cart from "./components/cart";
+import Cart from "./components/Cart";
 
 
 const Instamart = lazy(()=> import("./components/Instamart"));
