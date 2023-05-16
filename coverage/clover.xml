@@ -1,10 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684173572410" clover="3.2.0">
-  <project timestamp="1684173572410" name="All files">
-    <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="2" coveredelements="2" complexity="0" loc="1" ncloc="1" packages="1" files="1" classes="1"/>
-    <file name="sum.js" path="D:\10 may nreact\NamasteR\src\components\sum.js">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-    </file>
+<coverage generated="1684241930392" clover="3.2.0">
+  <project timestamp="1684241930392" name="All files">
+    <metrics statements="33" coveredstatements="25" conditionals="4" coveredconditionals="2" methods="15" coveredmethods="7" elements="52" coveredelements="34" complexity="0" loc="33" ncloc="33" packages="3" files="7" classes="7"/>
+    <package name="components">
+      <metrics statements="13" coveredstatements="10" conditionals="4" coveredconditionals="2" methods="7" coveredmethods="4"/>
+      <file name="Header.js" path="D:\10 may nreact\NamasteR\src\components\Header.js">
+        <metrics statements="12" coveredstatements="9" conditionals="4" coveredconditionals="2" methods="6" coveredmethods="3"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+      </file>
+      <file name="sum.js" path="D:\10 may nreact\NamasteR\src\components\sum.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="mocks">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="dummyLogo.js" path="D:\10 may nreact\NamasteR\src\mocks\dummyLogo.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="20" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
+      <file name="cartSlice.js" path="D:\10 may nreact\NamasteR\src\utils\cartSlice.js">
+        <metrics statements="5" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+      </file>
+      <file name="store.js" path="D:\10 may nreact\NamasteR\src\utils\store.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="useContext.js" path="D:\10 may nreact\NamasteR\src\utils\useContext.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="useOnline.js" path="D:\10 may nreact\NamasteR\src\utils\useOnline.js">
+        <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
