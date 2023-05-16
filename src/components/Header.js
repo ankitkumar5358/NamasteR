@@ -11,7 +11,7 @@ const loggedInUser = () => {
 
 export const Title = () => (
   <a href="/">
-    <img className="h-28 py-2 px-2" src={logo} alt="Food  Logo" />
+    <img data-testid="logo" className="h-28 py-2 px-2" src={logo} alt="Food  Logo" />
   </a>
 );
 
@@ -41,12 +41,12 @@ const Header = () => {
         <Link to="/instamart" className="text-gray-700 hover:text-blue-500">Instamart</Link>
       </li>
       <li className="px-2">
-        <Link to="/cart"  className="text-gray-700 hover:text-blue-500">Cart {cartItems.length}</Link>
+        <Link to="/cart"  data-testid="cart" className="text-gray-700 hover:text-blue-500">Cart {cartItems.length}</Link>
       </li>
     </ul>
   </div>
       
-      <h1>{useOnline ? "🟩 Online" : "🟥 Offline"}</h1>
+      <h1 data-testid="online-status" >{useOnline ? "🟩 Online" : "🟥 Offline"}</h1>
      <h1 className="text-blue-950">  {user.name}</h1>
       <div className="">
         {isLoggedIn ? (

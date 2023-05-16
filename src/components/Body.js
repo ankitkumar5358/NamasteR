@@ -46,6 +46,7 @@ const Body = () => {
           }}
         ></input>
         <button
+        data-testid="search-btn"
           className="p-2 m-2 bg-purple-600 hover:bg-purple-900 text-white rounded-lg"
           onClick={() => {
             const data = filterData(searchText, allRestaurants);
@@ -63,7 +64,7 @@ const Body = () => {
   onChange={(e) => setUser({ ...user, email: e.target.value })}
 />
       </div>
-      <div className="flex flex-wrap justify-evenly">
+      <div data-testid="res-list" className="flex flex-wrap justify-evenly">
         {restaurants.length === 0 ? (
           <h1>No Restaurant with matching name found!</h1>
         ) : (

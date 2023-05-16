@@ -1,6 +1,6 @@
 const Shimmer = () => {
   return (
-    <section className="bg-gray-100">
+    <div data-testid="shimmer" className="bg-gray-100">
       {Array(10).fill().map((_, index) => (
         <article key={index} className="bg-white rounded-md p-4 my-4 shadow-md">
           <div className="bg-gray-200 h-44 rounded-md animate-pulse mb-4"></div>
@@ -11,7 +11,7 @@ const Shimmer = () => {
           </div>
         </article>
       ))}
-    </section>
+    </div>
   );
 };
 
