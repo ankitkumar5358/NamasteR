@@ -38,6 +38,7 @@ const Body = () => {
     <>
       <div className="flex justify-center items-center  p-2 bg-pink-200 my-5">
         <input
+        data-testid="search-input"
           className="p-2 bg-purple-50 hover:bg-green-200"
           value={searchText}
           placeholder="search"

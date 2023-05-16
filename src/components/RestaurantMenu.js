@@ -37,11 +37,11 @@ const addFoodItem = (item) => {
       </div>
       <div>
         <h2>Menu Items:</h2>
-        <ul className="px-2 py-2 mx-2 my-2">
+        <ul data-testid="menu" className="px-2 py-2 mx-2 my-2">
           {restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards
             ? restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card?.itemCards.map(
               (item) => {
-                return <li  className="px-2 py-2 mx-2 my-2" key={item.card.info.name}> {item.card.info.name}  <button className="p-1 bg-green-100" onClick={() => addFoodItem(item) } >Add</button> </li>;
+                return <li  className="px-2 py-2 mx-2 my-2" key={item.card.info.name}> {item.card.info.name}  <button data-testid="addBtn" className="p-1 bg-green-100" onClick={() => addFoodItem(item) } >Add</button> </li>;
               }
             )
             : restaurant?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards

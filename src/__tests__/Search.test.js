@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render , waitFor, fireEvent} from "@testing-library/react";
 import Body from "../components/Body";
 import { Provider } from "react-redux";
 import store from "../utils/store"
@@ -57,4 +57,27 @@ test("restaurant card loads on homepage", async() => {
     const resList = body.getByTestId("res-list");
     expect(resList.children.length).toBe(15);
     // console.log(shimmer);
+})
+
+
+test("search for food string", async() => {
+    const body = render(
+        <StaticRouter>
+            <Provider store={store}>
+                <Body />
+            </Provider>
+        </StaticRouter>
+    );
+    await waitFor(()=> expect(body.getByTestId("search-btn")));
+    const input = body.getByTestId("search-input");
+    fireEvent.change("input", { target : {
+        value : "food",
+    },
+    })
+
+    const searchBtn = body.getByTestId("search-btn");
+    fireEvent.click(searchBtn);
+    const resList = body.getByTestId("res-list");
+    expect(resList.children.length).toBe(5);
+
 })
